@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watermark Multiple Images</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <main class="upload-wrapper">
+      <header>
+        <p>Upload Images</p>
+      </header>
+      <form class="upload-container">
+        <i id="upload_icon" class="material-symbols-outlined"> upload </i>
+        <p>Drag Files to Upload</p>
+        <p>or</p>
+        <label id="fileinput_label" for="uploadInput">Browse</label>
+        <input type="file" id="uploadInput" accept="image/*" multiple />
+      </form>
+    </main>
+
+    <main class="main-container">
+      <section>
+        <div class="header">
+          <i id="upload_icon" class="material-symbols-outlined">image </i>
+          <p>Preview</p>
+        </div>
+        <div id="canvasContainer" class="canvas-container"></div>
+      </section>
+      <section>
+        <div style="justify-content: space-between; padding: 15px 10px;" class="header">
+         <div style="display: flex; align-items: center; gap: 5px;">
+          <i id="upload_icon" class="material-symbols-outlined">tune </i>
+          <p>Customization</p>
+         </div>
+          <button onclick="cancelImage()" id="cncbtn">
+          <i id="upload_icon" class="material-symbols-outlined">Cancel </i>
+            
+            Cancel</button>
+        </div>
+        <div class="custom-container">
+          <div class="wrapper">
+            <label for="">Text</label>
+            <input
+              oninput="updateWaterMark(this)"
+              class="input"
+              type="text"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="wrapper">
+            <label for="">Fonts</label>
+            <select onchange="updateFonts(this)">
+              <option value="Arial">Arial</option>
+              <option style="font-family: cursive" value="cursive">
+                cursive
+              </option>
+              <option style="font-family: fantasy" value="fantasy">
+                fantasy
+              </option>
+              <option style="font-family: monospace" value="monospace">
+                monospace
+              </option>
+              <option style="font-family: Georgia, 'Times New Roman', Times, serif" value="Georgia, 'Times New Roman', Times, serif">
+                Georgia
+              </option>
+          
+            </select>
+          </div>
+          <div class="wrapper">
+            <label for="">Position</label>
+            <select onchange="updatePostition(this)">
+              <option value="(canvas.width - textWidth) / 2@canvas.height / 2">Center</option>
+              <option value="tl">Top-Left</option>
+              <option value="tc">Top-Center</option>
+              <option value="tr">Top-Right</option>
+              <option value="bl">Bottom-Left</option>
+              <option value="bc">Bottom-Center</option>
+              <option value="br">Bottom-Right</option>
+            </select>
+          </div>
+          <div class="wrapper">
+            <label for="">Size</label>
+            <div class="wrapper2">
+              <input
+                min="1"
+                max="100"
+                id="rangeText"
+                value="10"
+                class="input"
+                type="text"
+              />
+              <input id="rangeInput" type="range" value="1" min="1" max="100" />
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="">Opacity&Color</label>
+            <select onchange="updateOpacity(this)">
+              <option value="rgba(255, 255, 255, 0.1)">1</option>
+              <option value="rgba(255, 255, 255, 0.2)">2</option>
+              <option value="rgba(255, 255, 255, 0.3)">3</option>
+              <option value="rgba(255, 255, 255, 0.4)">4</option>
+              <option value="rgba(255, 255, 255, 0.5)">5</option>
+              <option value="rgba(255, 255, 255, 0.6)">6</option>
+              <option value="rgba(255, 255, 255, 0.7)">7</option>
+              <option value="rgba(255, 255, 255, 0.8)">8</option>
+              <option value="rgba(255, 255, 255, 0.9)">9</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="black">black</option>
+            </select>
+          </div>
+          <form class="wrapper">
+       
+        <label id="finputadd" for="uploadInput"> <i id="addicon" class="material-symbols-outlined"> add </i> Add More
+        </label>
+        <input type="file" id="uploadInput" accept="image/*" multiple />
+          </form>
+          <div class="wrapper">
+            <button id="downloadButton" disabled>
+        <i id="upload_icon" class="material-symbols-outlined"> download </i>
+
+              Download ZIP</button>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
