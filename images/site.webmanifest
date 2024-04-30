@@ -15,8 +15,8 @@
       }
     ],
     "start_url": "/watermark/",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "background_color": "#121212",
+    "theme_color": "#bb86f",
     "display": "standalone",
     "orientation": "any",
     "scope": "/watermark/",

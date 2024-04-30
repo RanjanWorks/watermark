@@ -3,15 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A web application for adding watermark text to images. Customize watermark text, font, opacity, and position. Download watermarked images as a ZIP file.">
-    <meta name="keywords" content="watermark, image, text, customization, download, web application">
-    <meta name="author" content="Ranjan">
+    <meta
+      name="description"
+      content="A web application for adding watermark text to images. Customize watermark text, font, opacity, and position. Download watermarked images as a ZIP file."
+    />
+    <meta
+      name="keywords"
+      content="watermark, image, text, customization, download, web application"
+    />
+    <meta name="author" content="Ranjan" />
+    <meta name="theme-color" content="#bb86f" />
     <link rel="canonical" href="https://vebpath.github.io/watermark/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/">
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-<link rel="manifest" href="./images/site.webmanifest">
-  
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+
     <title>Watermark Multiple Images</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -42,15 +59,19 @@
         <div id="canvasContainer" class="canvas-container"></div>
       </section>
       <section>
-        <div style="justify-content: space-between; padding: 15px 10px;" class="header">
-         <div style="display: flex; align-items: center; gap: 5px;">
-          <i id="upload_icon" class="material-symbols-outlined">tune </i>
-          <p>Customization</p>
-         </div>
+        <div
+          style="justify-content: space-between; padding: 15px 10px"
+          class="header"
+        >
+          <div style="display: flex; align-items: center; gap: 5px">
+            <i id="upload_icon" class="material-symbols-outlined">tune </i>
+            <p>Customization</p>
+          </div>
           <button onclick="cancelImage()" id="cncbtn">
-          <i id="upload_icon" class="material-symbols-outlined">Cancel </i>
-            
-            Cancel</button>
+            <i id="upload_icon" class="material-symbols-outlined">Cancel </i>
+
+            Cancel
+          </button>
         </div>
         <div class="custom-container">
           <div class="wrapper">
@@ -75,16 +96,20 @@
               <option style="font-family: monospace" value="monospace">
                 monospace
               </option>
-              <option style="font-family: Georgia, 'Times New Roman', Times, serif" value="Georgia, 'Times New Roman', Times, serif">
+              <option
+                style="font-family: Georgia, 'Times New Roman', Times, serif"
+                value="Georgia, 'Times New Roman', Times, serif"
+              >
                 Georgia
               </option>
-          
             </select>
           </div>
           <div class="wrapper">
             <label for="">Position</label>
             <select onchange="updatePostition(this)">
-              <option value="(canvas.width - textWidth) / 2@canvas.height / 2">Center</option>
+              <option value="(canvas.width - textWidth) / 2@canvas.height / 2">
+                Center
+              </option>
               <option value="tl">Top-Left</option>
               <option value="tc">Top-Center</option>
               <option value="tr">Top-Right</option>
@@ -126,17 +151,20 @@
             </select>
           </div>
           <form class="wrapper">
-       
-        <label id="finputadd" for="uploadInput"> <i id="addicon" class="material-symbols-outlined"> add </i> Add More
-        </label>
-        <input type="file" id="uploadInput" accept="image/*" multiple />
+            <label id="finputadd" for="uploadInput">
+              <i id="addicon" class="material-symbols-outlined"> add </i> Add
+              More
+            </label>
+            <input type="file" id="uploadInput" accept="image/*" multiple />
           </form>
           <div class="wrapper">
             <button id="downloadButton" disabled>
-        <i id="upload_icon" class="material-symbols-outlined"> download </i>
+              <i id="upload_icon" class="material-symbols-outlined">
+                download
+              </i>
 
-              Download ZIP</button>
-
+              Download ZIP
+            </button>
           </div>
         </div>
       </section>
