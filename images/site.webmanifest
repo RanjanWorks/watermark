@@ -14,12 +14,12 @@
         "type": "image/png"
       }
     ],
-    "start_url": "/index.html",
+    "start_url": "/watermark/",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
     "display": "standalone",
     "orientation": "any",
-    "scope": "/",
+    "scope": "/watermark/",
     "lang": "en",
     "dir": "ltr",
     "related_applications": [],
