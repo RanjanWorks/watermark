@@ -42,7 +42,7 @@ This is a simple web application for adding watermark text to images uploaded by
 To run the application locally, simply clone the repository and open the `index.html` file in your web browser.
 
 ```bash
-git clone https://github.com/vebpath/watermark/new/main?filename=README.md
+git clone https://github.com/vebpath/watermark
 cd watermark-app
 ```
 
