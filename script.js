@@ -1,3 +1,10 @@
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register (
+    'sw.js',
+    {scope: '/watermark/'}
+  )
+}
+
 let canContainer = document.getElementById("canvasContainer");
 let AllImages = [];
 let fonts = "Arial";
